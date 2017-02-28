@@ -9,7 +9,7 @@
  *
  */
 
-/** 
+/**
  * Make sure migrations don't run on the latest versions.
  */
 chrome.runtime.onInstalled.addListener(function(details) {
@@ -20,6 +20,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
         /*
          * example: localStorage.setItem('0.54.createtimers', 'done');
          */
+         DEBUG
     } else if (details.reason == "update") {
         var thisVersion = chrome.runtime.getManifest().version;
         console.info("Updated from " + details.previousVersion + " to " + thisVersion + "!");
