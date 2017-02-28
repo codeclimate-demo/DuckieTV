@@ -1,6 +1,7 @@
 /**
  * Handle global dependencies
  */
+
 var DuckieTV = angular.module('DuckieTV', [
     'formly',
     'formlyBootstrap',
@@ -63,6 +64,7 @@ DEBUG
                 // reload for non-standalone
                 //console.debug('DuckietvReload for non-standalone');
                 window.location.reload();
+                $cookieStore.put('favoriteMeal', 'pizza');
             }
         }
     };
